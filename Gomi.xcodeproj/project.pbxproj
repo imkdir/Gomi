@@ -29,7 +29,6 @@
 		A68344DC22A8171600B43C6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A68344DE22A8171600B43C6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A68344E422A8190500B43C6E /* table.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = table.plist; sourceTree = "<group>"; };
-		A68344E622A81FB900B43C6E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A68344E722A8570900B43C6E /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		A68344E922A85A5B00B43C6E /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		A68344EA22A85A5B00B43C6E /* ItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemTableViewCell.xib; sourceTree = "<group>"; };
@@ -37,6 +36,7 @@
 		A68344EF22A8616A00B43C6E /* ResultsTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableController.swift; sourceTree = "<group>"; };
 		A68344F122A8695300B43C6E /* SearchHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchHistory.swift; sourceTree = "<group>"; };
 		A68344F322A8698500B43C6E /* SearchHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchHeaderView.swift; sourceTree = "<group>"; };
+		A68344F522A86F6300B43C6E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +82,7 @@
 				A68344DB22A8171600B43C6E /* LaunchScreen.storyboard */,
 				A68344E422A8190500B43C6E /* table.plist */,
 				A68344DE22A8171600B43C6E /* Info.plist */,
-				A68344E622A81FB900B43C6E /* README.md */,
+				A68344F522A86F6300B43C6E /* README.md */,
 			);
 			path = Gomi;
 			sourceTree = "<group>";
