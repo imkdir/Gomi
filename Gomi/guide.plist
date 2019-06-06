@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<dict>
+			<key>id</key>
+			<integer>0</integer>
+			<key>title</key>
+			<string>盒类</string>
+			<key>detail</key>
+			<string>鸡蛋·豆腐·酱·水果等容器·打包便当容器等</string>
+		</dict>
+		<dict>
+			<key>id</key>
+			<integer>1</integer>
+			<key>title</key>
+			<string>杯类</string>
+			<key>detail</key>
+			<string>杯面·酸奶·布丁·果冻的容器等</string>
+		</dict>
+		<dict>
+			<key>id</key>
+			<integer>2</integer>
+			<key>title</key>
+			<string>托盘类</string>
+			<key>detail</key>
+			<string>肉·鱼·蔬菜等的托盘</string>
+		</dict>
+		<dict>
+			<key>id</key>
+			<integer>3</integer>
+			<key>title</key>
+			<string>瓶类</string>
+			<key>detail</key>
+			<string>洗发精·护发素·洗剂的容器等</string>
+		</dict>
+		<dict>
+			<key>id</key>
+			<integer>4</integer>
+			<key>title</key>
+			<string>包装袋类</string>
+			<key>detail</key>
+			<string>超市塑料袋·糖果糕点·面包·补充更换商品等袋等</string>
+		</dict>
+		<dict>
+			<key>id</key>
+			<integer>5</integer>
+			<key>title</key>
+			<string>缓冲材·泡沫聚苯乙烯类</string>
+			<key>detail</key>
+			<string>水果·蔬菜等网兜·家用电器等泡沫聚苯乙烯·气泡缓冲材等</string>
+		</dict>
+	</array>
+	<array/>
+	<array/>
+	<array/>
+</array>
+</plist>

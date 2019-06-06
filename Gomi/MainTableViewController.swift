@@ -24,7 +24,16 @@ final class MainTableViewController: BaseTableViewController {
     
     /// Secondary search results table view.
     private var resultsTableController: ResultsTableController!
-
+    
+    init() {
+        super.init(nibName: nil, bundle: nil)
+        tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

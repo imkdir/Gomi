@@ -19,6 +19,10 @@
 		A68344F222A8695300B43C6E /* SearchHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68344F122A8695300B43C6E /* SearchHistory.swift */; };
 		A68344F422A8698500B43C6E /* SearchHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68344F322A8698500B43C6E /* SearchHeaderView.swift */; };
 		A68344F622A8A42700B43C6E /* table.plist in Resources */ = {isa = PBXBuildFile; fileRef = A68344F822A8A42700B43C6E /* table.plist */; };
+		A683450922A8C56100B43C6E /* GuideCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683450822A8C56100B43C6E /* GuideCollectionViewController.swift */; };
+		A683450C22A8C57A00B43C6E /* GuideCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683450A22A8C57A00B43C6E /* GuideCollectionViewCell.swift */; };
+		A683450D22A8C57A00B43C6E /* GuideCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A683450B22A8C57A00B43C6E /* GuideCollectionViewCell.xib */; };
+		A683451022A8CD1B00B43C6E /* guide.plist in Resources */ = {isa = PBXBuildFile; fileRef = A683450F22A8CD1B00B43C6E /* guide.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +45,10 @@
 		A68344FB22A8A45400B43C6E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		A683450422A8C0DF00B43C6E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "zh-Hans"; path = "zh-Hans.lproj/table.plist"; sourceTree = "<group>"; };
 		A683450522A8C0E100B43C6E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/table.plist; sourceTree = "<group>"; };
+		A683450822A8C56100B43C6E /* GuideCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideCollectionViewController.swift; sourceTree = "<group>"; };
+		A683450A22A8C57A00B43C6E /* GuideCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideCollectionViewCell.swift; sourceTree = "<group>"; };
+		A683450B22A8C57A00B43C6E /* GuideCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuideCollectionViewCell.xib; sourceTree = "<group>"; };
+		A683450F22A8CD1B00B43C6E /* guide.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = guide.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,9 +90,13 @@
 				A68344ED22A8600900B43C6E /* BaseTableViewController.swift */,
 				A68344E922A85A5B00B43C6E /* ItemTableViewCell.swift */,
 				A68344EA22A85A5B00B43C6E /* ItemTableViewCell.xib */,
+				A683450822A8C56100B43C6E /* GuideCollectionViewController.swift */,
+				A683450A22A8C57A00B43C6E /* GuideCollectionViewCell.swift */,
+				A683450B22A8C57A00B43C6E /* GuideCollectionViewCell.xib */,
 				A68344D922A8171600B43C6E /* Assets.xcassets */,
 				A68344DB22A8171600B43C6E /* LaunchScreen.storyboard */,
 				A68344F822A8A42700B43C6E /* table.plist */,
+				A683450F22A8CD1B00B43C6E /* guide.plist */,
 				A68344DE22A8171600B43C6E /* Info.plist */,
 				A68344F522A86F6300B43C6E /* README.md */,
 			);
@@ -101,6 +113,7 @@
 				A68344CB22A8171300B43C6E /* Sources */,
 				A68344CC22A8171300B43C6E /* Frameworks */,
 				A68344CD22A8171300B43C6E /* Resources */,
+				A683450E22A8CBED00B43C6E /* Reveal */,
 			);
 			buildRules = (
 			);
@@ -151,7 +164,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A68344EC22A85A5B00B43C6E /* ItemTableViewCell.xib in Resources */,
+				A683450D22A8C57A00B43C6E /* GuideCollectionViewCell.xib in Resources */,
 				A68344F622A8A42700B43C6E /* table.plist in Resources */,
+				A683451022A8CD1B00B43C6E /* guide.plist in Resources */,
 				A68344DD22A8171600B43C6E /* LaunchScreen.storyboard in Resources */,
 				A68344DA22A8171600B43C6E /* Assets.xcassets in Resources */,
 			);
@@ -159,13 +174,36 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A683450E22A8CBED00B43C6E /* Reveal */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Reveal;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nREVEAL_APP_PATH=$(mdfind kMDItemCFBundleIdentifier=\"com.ittybittyapps.Reveal2\" | head -n 1)\nBUILD_SCRIPT_PATH=\"${REVEAL_APP_PATH}/Contents/SharedSupport/Scripts/reveal_server_build_phase.sh\"\nif [ \"${REVEAL_APP_PATH}\" -a -e \"${BUILD_SCRIPT_PATH}\" ]; then\n\"${BUILD_SCRIPT_PATH}\"\nelse\necho \"Reveal Server not loaded: Cannot find a compatible Reveal app.\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A68344CB22A8171300B43C6E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A68344EB22A85A5B00B43C6E /* ItemTableViewCell.swift in Sources */,
+				A683450C22A8C57A00B43C6E /* GuideCollectionViewCell.swift in Sources */,
 				A68344E822A8570900B43C6E /* Store.swift in Sources */,
+				A683450922A8C56100B43C6E /* GuideCollectionViewController.swift in Sources */,
 				A68344EE22A8600900B43C6E /* BaseTableViewController.swift in Sources */,
 				A68344F422A8698500B43C6E /* SearchHeaderView.swift in Sources */,
 				A68344F222A8695300B43C6E /* SearchHistory.swift in Sources */,
