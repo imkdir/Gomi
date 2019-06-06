@@ -1,10 +1,3 @@
-/*
-See LICENSE folder for this sample’s licensing information.
-
-Abstract:
-The table view controller responsible for displaying the filtered products as the user types in the search field.
-*/
-
 import UIKit
 
 class ResultsTableController: BaseTableViewController {
