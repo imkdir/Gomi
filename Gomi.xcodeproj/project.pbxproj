@@ -23,6 +23,9 @@
 		A683450C22A8C57A00B43C6E /* GuideCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683450A22A8C57A00B43C6E /* GuideCollectionViewCell.swift */; };
 		A683450D22A8C57A00B43C6E /* GuideCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A683450B22A8C57A00B43C6E /* GuideCollectionViewCell.xib */; };
 		A683451022A8CD1B00B43C6E /* guide.plist in Resources */ = {isa = PBXBuildFile; fileRef = A683450F22A8CD1B00B43C6E /* guide.plist */; };
+		A683451222A8FB6000B43C6E /* IBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683451122A8FB6000B43C6E /* IBView.swift */; };
+		A683451522A9264300B43C6E /* GuideHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683451322A9264300B43C6E /* GuideHeaderView.swift */; };
+		A683451622A9264300B43C6E /* GuideHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A683451422A9264300B43C6E /* GuideHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +52,9 @@
 		A683450A22A8C57A00B43C6E /* GuideCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideCollectionViewCell.swift; sourceTree = "<group>"; };
 		A683450B22A8C57A00B43C6E /* GuideCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuideCollectionViewCell.xib; sourceTree = "<group>"; };
 		A683450F22A8CD1B00B43C6E /* guide.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = guide.plist; sourceTree = "<group>"; };
+		A683451122A8FB6000B43C6E /* IBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBView.swift; sourceTree = "<group>"; };
+		A683451322A9264300B43C6E /* GuideHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideHeaderView.swift; sourceTree = "<group>"; };
+		A683451422A9264300B43C6E /* GuideHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuideHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +99,9 @@
 				A683450822A8C56100B43C6E /* GuideCollectionViewController.swift */,
 				A683450A22A8C57A00B43C6E /* GuideCollectionViewCell.swift */,
 				A683450B22A8C57A00B43C6E /* GuideCollectionViewCell.xib */,
+				A683451322A9264300B43C6E /* GuideHeaderView.swift */,
+				A683451422A9264300B43C6E /* GuideHeaderView.xib */,
+				A683451122A8FB6000B43C6E /* IBView.swift */,
 				A68344D922A8171600B43C6E /* Assets.xcassets */,
 				A68344DB22A8171600B43C6E /* LaunchScreen.storyboard */,
 				A68344F822A8A42700B43C6E /* table.plist */,
@@ -165,6 +174,7 @@
 			files = (
 				A68344EC22A85A5B00B43C6E /* ItemTableViewCell.xib in Resources */,
 				A683450D22A8C57A00B43C6E /* GuideCollectionViewCell.xib in Resources */,
+				A683451622A9264300B43C6E /* GuideHeaderView.xib in Resources */,
 				A68344F622A8A42700B43C6E /* table.plist in Resources */,
 				A683451022A8CD1B00B43C6E /* guide.plist in Resources */,
 				A68344DD22A8171600B43C6E /* LaunchScreen.storyboard in Resources */,
@@ -200,7 +210,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A683451222A8FB6000B43C6E /* IBView.swift in Sources */,
 				A68344EB22A85A5B00B43C6E /* ItemTableViewCell.swift in Sources */,
+				A683451522A9264300B43C6E /* GuideHeaderView.swift in Sources */,
 				A683450C22A8C57A00B43C6E /* GuideCollectionViewCell.swift in Sources */,
 				A68344E822A8570900B43C6E /* Store.swift in Sources */,
 				A683450922A8C56100B43C6E /* GuideCollectionViewController.swift in Sources */,

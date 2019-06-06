@@ -37,4 +37,5 @@ struct Guide: Codable {
     let id: Int
     let title: String
     let detail: String
+    let subgroup: String
 }
