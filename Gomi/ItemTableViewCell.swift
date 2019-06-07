@@ -22,12 +22,12 @@ final class ItemTableViewCell: UITableViewCell {
 extension Item.Group: CustomStringConvertible {
     var description: String {
         switch self {
-        case .resource: return NSLocalizedString("資源", comment: "")
-        case .combustible: return NSLocalizedString("可燃", comment: "")
-        case .incombustible: return NSLocalizedString("不燃", comment: "")
-        case .usedPaper: return NSLocalizedString("古紙", comment: "")
-        case .oversized: return NSLocalizedString("粗大", comment: "")
-        case .impossible: return NSLocalizedString("不可", comment: "")
+        case .resource: return NSLocalizedString("Recyclables", comment: "")
+        case .combustible: return NSLocalizedString("Combustible", comment: "")
+        case .incombustible: return NSLocalizedString("Non-combustible", comment: "")
+        case .usedPaper: return NSLocalizedString("Used paper", comment: "")
+        case .oversized: return NSLocalizedString("Large-sized waste", comment: "")
+        case .impossible: return NSLocalizedString("Impossible", comment: "")
         }
     }
 }

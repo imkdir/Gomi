@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14810.11" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.13"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="GuideHeaderView" customModule="Gomi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="117"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="emu-l2-OJF" customClass="IBView" customModule="Gomi" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="16" width="375" height="85"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f0B-pc-7We">
+                            <rect key="frame" x="110" y="0.0" width="265" height="85"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" ambiguous="YES" text="Place combustible wastes into either a garbage can with a lid or a transparent bag." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOE-2o-zQ4">
+                                    <rect key="frame" x="8" y="23" width="164.5" height="31.5"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="出し方" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NyQ-bi-9S6">
+                                    <rect key="frame" x="8" y="8" width="37" height="15"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="header1" translatesAutoresizingMaskIntoConstraints="NO" id="Wj0-39-5oD">
+                                    <rect key="frame" x="194.5" y="8" width="62.5" height="40.5"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="750" constant="60" id="LJL-Q0-nXh"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="NyQ-bi-9S6" firstAttribute="top" secondItem="f0B-pc-7We" secondAttribute="top" constant="8" id="FWi-rD-Hgz"/>
+                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="sOE-2o-zQ4" secondAttribute="bottom" constant="8" id="RnV-xR-Tf6"/>
+                                <constraint firstItem="sOE-2o-zQ4" firstAttribute="top" secondItem="NyQ-bi-9S6" secondAttribute="bottom" id="Sel-uQ-XgT"/>
+                                <constraint firstItem="Wj0-39-5oD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="NyQ-bi-9S6" secondAttribute="trailing" constant="8" id="Utt-Rg-cDh"/>
+                                <constraint firstItem="Wj0-39-5oD" firstAttribute="top" secondItem="f0B-pc-7We" secondAttribute="top" constant="8" id="XQt-3a-Ymt"/>
+                                <constraint firstItem="Wj0-39-5oD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sOE-2o-zQ4" secondAttribute="trailing" constant="8" id="b5v-jJ-LsW"/>
+                                <constraint firstItem="sOE-2o-zQ4" firstAttribute="leading" secondItem="f0B-pc-7We" secondAttribute="leading" constant="8" id="dbf-dc-Pb2"/>
+                                <constraint firstItem="NyQ-bi-9S6" firstAttribute="leading" secondItem="f0B-pc-7We" secondAttribute="leading" constant="8" id="hwC-kC-wOR"/>
+                                <constraint firstAttribute="trailing" secondItem="Wj0-39-5oD" secondAttribute="trailing" constant="8" id="v8Q-jP-ax9"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Combustible" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="mlG-Ha-RyL">
+                            <rect key="frame" x="8" y="8" width="94" height="69"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.90014880900000005" green="0.031841441989999997" blue="0.068689517680000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="f0B-pc-7We" firstAttribute="top" secondItem="emu-l2-OJF" secondAttribute="top" id="04Z-bL-tlr"/>
+                        <constraint firstItem="mlG-Ha-RyL" firstAttribute="top" secondItem="emu-l2-OJF" secondAttribute="top" constant="8" id="60c-17-9Ko"/>
+                        <constraint firstAttribute="bottom" secondItem="f0B-pc-7We" secondAttribute="bottom" id="8Dw-bi-yQk"/>
+                        <constraint firstItem="f0B-pc-7We" firstAttribute="leading" secondItem="mlG-Ha-RyL" secondAttribute="trailing" constant="8" id="8LM-wa-p9I"/>
+                        <constraint firstAttribute="trailing" secondItem="f0B-pc-7We" secondAttribute="trailingMargin" constant="8" id="Ivf-Fm-qAa"/>
+                        <constraint firstItem="mlG-Ha-RyL" firstAttribute="leading" secondItem="emu-l2-OJF" secondAttribute="leading" constant="8" id="OtW-3Q-cMP"/>
+                        <constraint firstItem="mlG-Ha-RyL" firstAttribute="width" secondItem="emu-l2-OJF" secondAttribute="width" multiplier="1:4" id="di5-lf-gLT"/>
+                        <constraint firstAttribute="bottom" secondItem="mlG-Ha-RyL" secondAttribute="bottom" constant="8" id="fy9-f1-BHZ"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="16"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.90014880900000005" green="0.031841441989999997" blue="0.068689517680000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="emu-l2-OJF" firstAttribute="trailing" secondItem="VXr-Tz-HHm" secondAttribute="trailing" id="MNF-nZ-hto"/>
+                <constraint firstItem="emu-l2-OJF" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="16" id="NZx-sE-W35"/>
+                <constraint firstItem="emu-l2-OJF" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="T81-bt-UCr"/>
+                <constraint firstAttribute="bottom" secondItem="emu-l2-OJF" secondAttribute="bottom" constant="16" id="YzB-rE-G2J"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <connections>
+                <outlet property="containerView" destination="emu-l2-OJF" id="WeC-hJ-7ET"/>
+                <outlet property="imageIcon" destination="Wj0-39-5oD" id="g5G-63-NJJ"/>
+                <outlet property="labelDetail" destination="sOE-2o-zQ4" id="6uP-fr-t8P"/>
+                <outlet property="labelTitle" destination="mlG-Ha-RyL" id="SAq-1o-BA4"/>
+            </connections>
+            <point key="canvasLocation" x="177.536231884058" y="117.52232142857142"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="header1" width="62.5" height="40.5"/>
+    </resources>
+</document>

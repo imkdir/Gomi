@@ -68,8 +68,8 @@ final class GuideCollectionViewController: UICollectionViewController {
         paragraphStyle.headIndent = 10
         let attributedMessage = NSAttributedString(string: message, attributes: [
             .paragraphStyle: paragraphStyle,
-            .font: UIFont.systemFont(ofSize: 13, weight: .thin)])
-        let alert = UIAlertController(title: NSLocalizedString("丢弃方法", comment: ""), message: nil, preferredStyle: .alert)
+            .font: UIFont.systemFont(ofSize: 13)])
+        let alert = UIAlertController(title: NSLocalizedString("How to dispose", comment: ""), message: nil, preferredStyle: .alert)
         alert.setValue(attributedMessage, forKey: "attributedMessage")
         alert.addAction(.init(title: NSLocalizedString("OK", comment: ""), style: .cancel))
         present(alert, animated: true)

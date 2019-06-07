@@ -7,121 +7,121 @@
 			<key>id</key>
 			<integer>0</integer>
 			<key>title</key>
-			<string>盒类</string>
+			<string>Packages</string>
 			<key>detail</key>
-			<string>鸡蛋·豆腐·酱·水果等容器·打包便当容器等</string>
+			<string>Containers for eggs, natto (fermented soy beans), miso, fruits, etc. and takeout bento boxes, etc.</string>
 			<key>subgroup</key>
-			<string>塑料制「容器」「包装」</string>
+			<string>Plastic containers and packages</string>
 			<key>dispose</key>
-			<string>不留内容物|有污渍，冲洗掉装|装入可视内容物的塑料袋里</string>
+			<string>Remove all contents.|Rinse to remove stains.|Place items in a transparent bag.</string>
 		</dict>
 		<dict>
 			<key>id</key>
 			<integer>1</integer>
 			<key>title</key>
-			<string>杯类</string>
+			<string>Cups</string>
 			<key>detail</key>
-			<string>杯面·酸奶·布丁·果冻的容器等</string>
+			<string>Containers for cup noodles, yogurts, puddings, jellos, etc.</string>
 			<key>subgroup</key>
-			<string>塑料制「容器」「包装」</string>
+			<string>Plastic containers and packages</string>
 			<key>dispose</key>
-			<string>不留内容物|有污渍，冲洗掉装|装入可视内容物的塑料袋里</string>
+			<string>Remove all contents.|Rinse to remove stains.|Place items in a transparent bag.</string>
 		</dict>
 		<dict>
 			<key>id</key>
 			<integer>2</integer>
 			<key>title</key>
-			<string>托盘类</string>
+			<string>Trays</string>
 			<key>detail</key>
-			<string>肉·鱼·蔬菜等的托盘</string>
+			<string>Trays for meats, fish, vegetables, etc.</string>
 			<key>subgroup</key>
-			<string>塑料制「容器」「包装」</string>
+			<string>Plastic containers and packages</string>
 			<key>dispose</key>
-			<string>不留内容物|有污渍，冲洗掉装|装入可视内容物的塑料袋里</string>
+			<string>Remove all contents.|Rinse to remove stains.|Place items in a transparent bag.</string>
 		</dict>
 		<dict>
 			<key>id</key>
 			<integer>3</integer>
 			<key>title</key>
-			<string>瓶类</string>
+			<string>Bottles</string>
 			<key>detail</key>
-			<string>洗发精·护发素·洗剂的容器等</string>
+			<string>Containers for shampoos, conditioners, dish soaps, etc.</string>
 			<key>subgroup</key>
-			<string>塑料制「容器」「包装」</string>
+			<string>Plastic containers and packages</string>
 			<key>dispose</key>
-			<string>不留内容物|有污渍，冲洗掉装|装入可视内容物的塑料袋里</string>
+			<string>Remove all contents.|Rinse to remove stains.|Place items in a transparent bag.</string>
 		</dict>
 		<dict>
 			<key>id</key>
 			<integer>4</integer>
 			<key>title</key>
-			<string>包装袋类</string>
+			<string>Bags</string>
 			<key>detail</key>
-			<string>超市塑料袋·糖果糕点·面包·补充更换商品等袋等</string>
+			<string>Plastic bags, and bags for snacks, shampoos, bread, refillable products, etc.</string>
 			<key>subgroup</key>
-			<string>塑料制「容器」「包装」</string>
+			<string>Plastic containers and packages</string>
 			<key>dispose</key>
-			<string>不留内容物|有污渍，冲洗掉装|装入可视内容物的塑料袋里</string>
+			<string>Remove all contents.|Rinse to remove stains.|Place items in a transparent bag.</string>
 		</dict>
 		<dict>
 			<key>id</key>
 			<integer>5</integer>
 			<key>title</key>
-			<string>缓冲材·泡沫聚苯乙烯类</string>
+			<string>Packing materials and Styrofoam</string>
 			<key>detail</key>
-			<string>水果·蔬菜等网兜·家用电器等泡沫聚苯乙烯·气泡缓冲材等</string>
+			<string>Nets for fruits and vegetables, styrofoam for electric appliances, bubble-wrap, etc.</string>
 			<key>subgroup</key>
-			<string>塑料制「容器」「包装」</string>
+			<string>Plastic containers and packages</string>
 			<key>dispose</key>
-			<string>不留内容物|有污渍，冲洗掉装|装入可视内容物的塑料袋里</string>
+			<string>Remove all contents.|Rinse to remove stains.|Place items in a transparent bag.</string>
 		</dict>
 		<dict>
 			<key>id</key>
 			<integer>6</integer>
 			<key>title</key>
-			<string>其他容器，包装</string>
+			<string>Other containers and packages</string>
 			<key>detail</key>
-			<string>标签，瓶盖·盖子·商品的包装薄膜（保鲜膜类）·糖包装封具·药剂板片包装</string>
+			<string>Labels, caps, lids, packaging-films, candy-wrappers, bread clips, packs of pills, etc.</string>
 			<key>subgroup</key>
-			<string>塑料制「容器」「包装」</string>
+			<string>Plastic containers and packages</string>
 			<key>dispose</key>
-			<string>不留内容物|有污渍，冲洗掉装|装入可视内容物的塑料袋里</string>
+			<string>Remove all contents.|Rinse to remove stains.|Place items in a transparent bag.</string>
 		</dict>
 		<dict>
 			<key>id</key>
 			<integer>7</integer>
 			<key>title</key>
-			<string>塑料瓶（PET瓶）</string>
+			<string>PET bottles</string>
 			<key>detail</key>
-			<string>清凉饮料·酒类·酱油等塑料瓶</string>
+			<string>for softdrinks, alcoholic beverages, soy sauce, etc.</string>
 			<key>subgroup</key>
 			<string></string>
 			<key>dispose</key>
-			<string>拧下瓶盖，撕下标签|清洗后澄干，从横方向压扁|装入专用网袋里或可视内容物的塑料袋里</string>
+			<string>Remove and dispose of caps and labels.|Rinse and drain off the water.|Put them into a designated net or a transparent bag.</string>
 		</dict>
 		<dict>
 			<key>id</key>
 			<integer>8</integer>
 			<key>title</key>
-			<string>玻璃瓶</string>
+			<string>Bottles</string>
 			<key>detail</key>
-			<string>饮料·食品用</string>
+			<string>for beverage and food</string>
 			<key>subgroup</key>
 			<string></string>
 			<key>dispose</key>
-			<string>拧下瓶盖|清洗后澄干|装入专用收集箱（黄色）或可视内容物的塑料袋里</string>
+			<string>Remove caps|Rinse and drain off the water.|Put them into the designated bin (yellow) or a transparent bag.</string>
 		</dict>
 		<dict>
 			<key>id</key>
 			<integer>9</integer>
 			<key>title</key>
-			<string>铝罐·钢铁罐</string>
+			<string>Cans(aluminum cans and steel cans) </string>
 			<key>detail</key>
-			<string>饮料·食品用</string>
+			<string>for beverages and foods</string>
 			<key>subgroup</key>
 			<string></string>
 			<key>dispose</key>
-			<string>清洗后澄干|装入专用收集箱（蓝色）或可视内容物的塑料袋里</string>
+			<string>Rinse and drain off the water.|Put them into the designated bin (blue) or a transparent bag.</string>
 		</dict>
 	</array>
 	<array>
@@ -129,9 +129,9 @@
 			<key>id</key>
 			<integer>10</integer>
 			<key>title</key>
-			<string>厨房垃圾</string>
+			<string>Kitchen garbage</string>
 			<key>detail</key>
-			<string>请挤出水分装好拿出</string>
+			<string>Squeeze out water from kitchen garbage.</string>
 			<key>subgroup</key>
 			<string></string>
 			<key>dispose</key>
@@ -141,9 +141,9 @@
 			<key>id</key>
 			<integer>11</integer>
 			<key>title</key>
-			<string>食用油</string>
+			<string>Cooking oil</string>
 			<key>detail</key>
-			<string>请把油用废纸，旧布等吸收，或使用凝固剂凝固</string>
+			<string>Soak cooking oil in used paper or old fabric, or solidify it with a coagulator.</string>
 			<key>subgroup</key>
 			<string></string>
 			<key>dispose</key>
@@ -153,7 +153,7 @@
 			<key>id</key>
 			<integer>12</integer>
 			<key>title</key>
-			<string>衣物类·布制品</string>
+			<string>Clothes and fabric</string>
 			<key>detail</key>
 			<string></string>
 			<key>subgroup</key>
@@ -165,7 +165,7 @@
 			<key>id</key>
 			<integer>13</integer>
 			<key>title</key>
-			<string>枝叶·落叶</string>
+			<string>Twigs and dead leaves</string>
 			<key>detail</key>
 			<string></string>
 			<key>subgroup</key>
@@ -177,9 +177,9 @@
 			<key>id</key>
 			<integer>14</integer>
 			<key>title</key>
-			<string>皮革·橡胶制品</string>
+			<string>Leather products and rubber products</string>
 			<key>detail</key>
-			<string>金属配件等小的金属部分，如果不能拆取下来，就直接投放。</string>
+			<string>If small metal parts such as clasps cannot be removed, dispose of them as is.</string>
 			<key>subgroup</key>
 			<string></string>
 			<key>dispose</key>
@@ -189,9 +189,9 @@
 			<key>id</key>
 			<integer>15</integer>
 			<key>title</key>
-			<string>「容器」「包装」以外的塑料制品</string>
+			<string>Plastic products other than containers or packages</string>
 			<key>detail</key>
-			<string>CD ·录像带·文具·日用品·玩具·塑料制衣架等</string>
+			<string>CDs, video tapes, stationeries, household goods, toys, plastic or wooden hangers, etc.</string>
 			<key>subgroup</key>
 			<string></string>
 			<key>dispose</key>
@@ -201,9 +201,9 @@
 			<key>id</key>
 			<integer>16</integer>
 			<key>title</key>
-			<string>难以清除污垢的塑料瓶·塑料制容器包装</string>
+			<string>Plastic bottles,  containers or packages  with unremovable stains</string>
 			<key>detail</key>
-			<string>带有塑料标记的塑料制品</string>
+			<string></string>
 			<key>subgroup</key>
 			<string></string>
 			<key>dispose</key>
@@ -213,9 +213,9 @@
 			<key>id</key>
 			<integer>17</integer>
 			<key>title</key>
-			<string>不能作为废纸回收的纸类</string>
+			<string>Paper unable to be collected as used paper</string>
 			<key>detail</key>
-			<string>纸杯·收据·照片·压接明信片·纸屑·纸巾·纸衣粉盒·宅便传票·带铝膜的纸（酒盒等）</string>
+			<string>Paper cups, receipts, photos, pressure bonded postcards, paper scraps, tissue papers, detergent boxes, courier service labels, paper lined with aluminum (sake cartons, etc), etc</string>
 			<key>subgroup</key>
 			<string></string>
 			<key>dispose</key>
@@ -225,9 +225,9 @@
 			<key>id</key>
 			<integer>18</integer>
 			<key>title</key>
-			<string>其他</string>
+			<string>Others</string>
 			<key>detail</key>
-			<string>卫生用品·保冷剂等（脏污扔到卫生间便器里，用水冲掉）</string>
+			<string>Hygiene products, blue ice gel. etc.(Flush excrements from diapers into a toilet bowl.)</string>
 			<key>subgroup</key>
 			<string></string>
 			<key>dispose</key>
@@ -239,7 +239,7 @@
 			<key>id</key>
 			<integer>19</integer>
 			<key>title</key>
-			<string>陶瓷器·玻璃</string>
+			<string>Ceramics, glass</string>
 			<key>detail</key>
 			<string></string>
 			<key>subgroup</key>
@@ -251,7 +251,7 @@
 			<key>id</key>
 			<integer>20</integer>
 			<key>title</key>
-			<string>金属类</string>
+			<string>Metal</string>
 			<key>detail</key>
 			<string></string>
 			<key>subgroup</key>
@@ -263,21 +263,21 @@
 			<key>id</key>
 			<integer>21</integer>
 			<key>title</key>
-			<string>喷雾罐·打火机·液化气罐</string>
+			<string>Spray cans, lighters, gas cartridge bottles</string>
 			<key>detail</key>
-			<string>内容物完全用尽的</string>
+			<string>use up contents</string>
 			<key>subgroup</key>
 			<string></string>
 			<key>dispose</key>
-			<string>必须完全使用完|必须与其它不可燃垃圾分开装入单独的袋子|写上「危険」字，再投放</string>
+			<string>Be sure to use up contents inside.|Use a garbage bag separate from other non-combustible wastes.|Mark &quot;dangerous&quot; on the garbage bag.</string>
 		</dict>
 		<dict>
 			<key>id</key>
 			<integer>22</integer>
 			<key>title</key>
-			<string>小型家电用品</string>
+			<string>Small home appliances</string>
 			<key>detail</key>
-			<string>最大边长未满30cm的东西</string>
+			<string>A longest side is smaller than 30cm</string>
 			<key>subgroup</key>
 			<string></string>
 			<key>dispose</key>
@@ -287,25 +287,25 @@
 			<key>id</key>
 			<integer>23</integer>
 			<key>title</key>
-			<string>荧光灯管·灯泡型荧光灯管</string>
+			<string>Tube-shaped and bulb-shaped fluorescent lights</string>
 			<key>detail</key>
-			<string>请装入更换时的盒子、或袋子上注明「荧光管」等字样再丢出</string>
+			<string></string>
 			<key>subgroup</key>
-			<string>含水银制品</string>
+			<string>Products containing mercury</string>
 			<key>dispose</key>
-			<string>请装入更换时的盒子，或袋子上注明「荧光管」等字样再丢出</string>
+			<string>Place it in replacement packaging or write “fluorescent tube” on the garbage bag.</string>
 		</dict>
 		<dict>
 			<key>id</key>
 			<integer>24</integer>
 			<key>title</key>
-			<string>含水银的其他产品</string>
+			<string>Other items containing mercury</string>
 			<key>detail</key>
-			<string>水银体温计·水银血压计等</string>
+			<string>Mercury thermometers, mercury blood pressure manometer, etc.</string>
 			<key>subgroup</key>
-			<string>含水银制品</string>
+			<string>Products containing mercury</string>
 			<key>dispose</key>
-			<string>请在袋子上注明“水银体温计·水银血压计”等字样再丢出</string>
+			<string>Write “mercury” on the transparaent bag before disposal.</string>
 		</dict>
 	</array>
 	<array>
@@ -313,9 +313,9 @@
 			<key>id</key>
 			<integer>25</integer>
 			<key>title</key>
-			<string>报纸</string>
+			<string>Newspapers</string>
 			<key>detail</key>
-			<string>折叠传单纸盒报纸一起捆绑再投放。</string>
+			<string>Bundle flyers together with newspapers.</string>
 			<key>subgroup</key>
 			<string></string>
 			<key>dispose</key>
@@ -325,9 +325,9 @@
 			<key>id</key>
 			<integer>26</integer>
 			<key>title</key>
-			<string>瓦楞纸箱</string>
+			<string>Cardboard boxes</string>
 			<key>detail</key>
-			<string>必须叠好了再投放</string>
+			<string>Fold them to flatten.</string>
 			<key>subgroup</key>
 			<string></string>
 			<key>dispose</key>
@@ -337,9 +337,9 @@
 			<key>id</key>
 			<integer>27</integer>
 			<key>title</key>
-			<string>杂志类</string>
+			<string>Miscellaneous</string>
 			<key>detail</key>
-			<string>杂志·书·杂纸等</string>
+			<string>Magazines, books, waste paper , etc.</string>
 			<key>subgroup</key>
 			<string></string>
 			<key>dispose</key>

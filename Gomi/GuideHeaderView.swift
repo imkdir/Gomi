@@ -42,11 +42,11 @@ extension Item.Group {
     var headerDetail: String? {
         switch self {
         case .resource:
-            return NSLocalizedString("请清除污渍，分门别类后投放\n种类不同，回收时间与回收车辆也不同", comment: "")
+            return NSLocalizedString("Remove stains from recyclables and classify  them into each category.\nCollection time and collection vehicles differ depending on types of items.", comment: "")
         case .combustible, .incombustible:
-            return NSLocalizedString("装入带盖垃圾桶内或可视内容物等塑料袋里\n边长超过30cm的物品作为大件垃圾投放", comment: "")
+            return NSLocalizedString("Place combustible wastes into either a garbage can with a lid or a transparent bag.\nGenerally, dispose of any waste product 30cm wide or larger as large-sized waste.", comment: "")
         case .usedPaper:
-            return NSLocalizedString("请分门别类用绳带捆绑好\n杂纸除去纸以外的部分，夹在杂志里，或装入纸袋里投放", comment: "")
+            return NSLocalizedString("Bundle items in each category and tie them up with strings.\nRemove parts other than paper from waste paper and insert them between magazine pages or  put them in a paper bag for disposal.", comment: "")
         default:
             return nil
         }
