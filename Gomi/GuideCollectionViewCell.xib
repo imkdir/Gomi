@@ -37,7 +37,7 @@
                         </variation>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="SjX-2s-sTp">
-                        <rect key="frame" x="20" y="156" width="148" height="20"/>
+                        <rect key="frame" x="20" y="156" width="153" height="20"/>
                         <subviews>
                             <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qQc-Zt-v2K" customClass="IBView" customModule="Gomi" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="28.5" height="20"/>
@@ -63,10 +63,10 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7XJ-8j-0h6" customClass="IBView" customModule="Gomi" customModuleProvider="target">
-                                <rect key="frame" x="32.5" y="0.0" width="115.5" height="20"/>
+                                <rect key="frame" x="32.5" y="0.0" width="120.5" height="20"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text=" 塑料制「容器」「包装」" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwD-fx-qeb">
-                                        <rect key="frame" x="0.0" y="0.0" width="115.5" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="塑料制「容器」「包装」" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwD-fx-qeb">
+                                        <rect key="frame" x="4" y="0.0" width="112.5" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -75,8 +75,8 @@
                                 <color key="backgroundColor" red="0.17657759789999999" green="0.56967288260000004" blue="0.24973207710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="bwD-fx-qeb" secondAttribute="bottom" id="DRb-f4-Sup"/>
-                                    <constraint firstItem="bwD-fx-qeb" firstAttribute="leading" secondItem="7XJ-8j-0h6" secondAttribute="leading" id="LFM-to-aDM"/>
-                                    <constraint firstAttribute="trailing" secondItem="bwD-fx-qeb" secondAttribute="trailing" id="PA6-JH-muW"/>
+                                    <constraint firstItem="bwD-fx-qeb" firstAttribute="leading" secondItem="7XJ-8j-0h6" secondAttribute="leading" constant="4" id="LFM-to-aDM"/>
+                                    <constraint firstAttribute="trailing" secondItem="bwD-fx-qeb" secondAttribute="trailing" constant="4" id="PA6-JH-muW"/>
                                     <constraint firstItem="bwD-fx-qeb" firstAttribute="top" secondItem="7XJ-8j-0h6" secondAttribute="top" id="YKr-BM-pGO"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>

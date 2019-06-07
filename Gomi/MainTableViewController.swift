@@ -37,7 +37,7 @@ final class MainTableViewController: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = NSLocalizedString("ごみ", comment: "")
+        title = NSLocalizedString("Search", comment: "")
         
         resultsTableController = ResultsTableController()
         

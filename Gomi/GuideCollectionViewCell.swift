@@ -19,7 +19,7 @@ final class GuideCollectionViewCell: UICollectionViewCell {
         labelGroup.text = group.description
         labelSubgroup.superview!.backgroundColor = group.color
         labelSubgroup.superview!.isHidden = guide.subgroup.isEmpty
-        labelSubgroup.text = "  \(guide.subgroup)"
+        labelSubgroup.text = guide.subgroup
     }
     
     override func awakeFromNib() {

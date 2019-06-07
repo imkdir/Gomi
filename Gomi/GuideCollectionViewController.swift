@@ -24,7 +24,7 @@ final class GuideCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = NSLocalizedString("Guide", comment: "")
+        title = NSLocalizedString("Browse", comment: "")
 
         self.collectionView.backgroundColor = #colorLiteral(red: 0.937263906, green: 0.9370692968, blue: 0.9586113095, alpha: 1)
         self.collectionView.contentInset = .init(top: 20, left: 16, bottom: 20, right: 16)
