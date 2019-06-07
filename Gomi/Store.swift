@@ -38,4 +38,5 @@ struct Guide: Codable {
     let title: String
     let detail: String
     let subgroup: String
+    let dispose: String
 }

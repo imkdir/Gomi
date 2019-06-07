@@ -54,6 +54,27 @@ final class GuideCollectionViewController: UICollectionViewController {
         return cell
     }
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        presentDisposeInstruction(for: Store.shared.guides[indexPath.section][indexPath.item])
+    }
+    
+    private func presentDisposeInstruction(for guide: Guide) {
+        guard !guide.dispose.isEmpty else { return }
+        let components = guide.dispose.components(separatedBy: "|")
+        let message = components.map({ "· \($0)" }).joined(separator: "\n")
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = .left
+        paragraphStyle.headIndent = 10
+        let attributedMessage = NSAttributedString(string: message, attributes: [
+            .paragraphStyle: paragraphStyle,
+            .font: UIFont.systemFont(ofSize: 13, weight: .thin)])
+        let alert = UIAlertController(title: NSLocalizedString("丢弃方法", comment: ""), message: nil, preferredStyle: .alert)
+        alert.setValue(attributedMessage, forKey: "attributedMessage")
+        alert.addAction(.init(title: NSLocalizedString("OK", comment: ""), style: .cancel))
+        present(alert, animated: true)
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerIdentifier, for: indexPath) as! GuideHeaderView
         header.configure(for: Item.Group(rawValue: indexPath.section)!)

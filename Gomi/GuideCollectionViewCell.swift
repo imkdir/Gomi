@@ -46,7 +46,9 @@ final class GuideCollectionViewCell: UICollectionViewCell {
             constraint.isActive = true
             contentView.heightAnchor.constraint(equalToConstant: 192).isActive = true
         } else {
-            contentView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 32).isActive = true
+            let constraint = contentView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 32)
+            constraint.priority = .defaultHigh
+            constraint.isActive = true
         }
     }
 
