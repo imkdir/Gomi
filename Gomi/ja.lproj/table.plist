@@ -1096,7 +1096,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>薬びん、飲用Impossible</string>
+		<string>薬びん、飲用不可</string>
 		<key>group</key>
 		<integer>2</integer>
 	</dict>

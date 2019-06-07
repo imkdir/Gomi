@@ -343,7 +343,7 @@
 			<key>subgroup</key>
 			<string></string>
 			<key>dispose</key>
-			<string></string>
+			<string>Remove parts other than paper from waste paper and insert them between magazine pages or  put them in a paper bag for disposal.</string>
 		</dict>
 	</array>
 </array>

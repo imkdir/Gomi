@@ -269,7 +269,7 @@
 			<key>subgroup</key>
 			<string></string>
 			<key>dispose</key>
-			<string>必须完全使用完|必须与其它Impossible燃垃圾分开装入单独的袋子|写上「危険」字，再投放</string>
+			<string>必须完全使用完|必须与其它不可燃垃圾分开装入单独的袋子|写上「危険」字，再投放</string>
 		</dict>
 		<dict>
 			<key>id</key>
