@@ -14,7 +14,7 @@ final class GuideCollectionViewController: UICollectionViewController {
         
         super.init(collectionViewLayout: layout)
         
-        tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 1)
+        tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 2)
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -29,7 +29,7 @@ class Item: NSObject, Codable {
     let group: Group
     
     enum Group: Int, Codable {
-        case resource, combustible, incombustible, usedPaper, oversized, impossible
+        case resource, combustible, incombustible, usedPaper, oversized, impossible, containMercury
     }
 }
 

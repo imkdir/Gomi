@@ -83,7 +83,7 @@ extension Item.Group {
         case .incombustible: return #colorLiteral(red: 0.01532619074, green: 0.2493849993, blue: 0.5993071198, alpha: 1)
         case .usedPaper: return #colorLiteral(red: 0.458291471, green: 0.07755672187, blue: 0.5188565254, alpha: 1)
         case .oversized: return #colorLiteral(red: 0.2939098179, green: 0.2860078812, blue: 0.2859160304, alpha: 1)
-        case .impossible: return .clear
+        default: return .clear
         }
     }
 }

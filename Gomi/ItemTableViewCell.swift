@@ -28,6 +28,7 @@ extension Item.Group: CustomStringConvertible {
         case .usedPaper: return NSLocalizedString("Used paper", comment: "")
         case .oversized: return NSLocalizedString("Large-sized waste", comment: "")
         case .impossible: return NSLocalizedString("Impossible", comment: "")
+        case .containMercury: return NSLocalizedString("Products containing mercury", comment: "")
         }
     }
 }

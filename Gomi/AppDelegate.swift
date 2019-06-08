@@ -8,10 +8,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let window = UIWindow(frame: UIScreen.main.bounds)
         let tabBarController = UITabBarController()
+        
         tabBarController.viewControllers = [
-            UINavigationController(rootViewController: MainTableViewController()),
-            UINavigationController(rootViewController: GuideCollectionViewController())
-        ]
+            MainTableViewController(),
+            ReminderListViewController(),
+            GuideCollectionViewController()
+        ].map(UINavigationController.init(rootViewController:))
+        
         window.rootViewController = tabBarController
         window.backgroundColor = .white
         window.makeKeyAndVisible()
