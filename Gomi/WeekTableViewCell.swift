@@ -11,11 +11,11 @@ final class WeekTableViewCell: UITableViewCell {
     
     func configure(value index: Int, onSelect: @escaping (Int) -> Void) {
         self.onSelect = onSelect
-        controlWeekOfMonth.selectedSegmentIndex = index
+        controlWeekOfMonth.selectedSegmentIndex = index - 1
     }
     
     @IBAction func selectedIndexChanged(_ sender: UISegmentedControl) {
-        onSelect(sender.selectedSegmentIndex)
+        onSelect(sender.selectedSegmentIndex + 1)
     }
     
     override func awakeFromNib() {

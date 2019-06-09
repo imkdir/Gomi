@@ -4,13 +4,13 @@ struct Reminder: Codable {
     let group: Item.Group
     var weekday: [Int]
     var weekOfMonth: [Int]
-    var hour: Int?
+    var due: Date?
     var isOn: Bool
 }
 
 extension Reminder {
     init(group: Item.Group) {
-        self.init(group: group, weekday: [], weekOfMonth: [], hour: nil, isOn: true)
+        self.init(group: group, weekday: [], weekOfMonth: [], due: nil, isOn: true)
     }
 }
 

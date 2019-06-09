@@ -82,9 +82,6 @@ extension MainTableViewController {
             let term = SearchHistory.read[indexPath.row]
             searchController.isActive = true
             searchController.searchBar.text = term
-        } else {
-            let selectedItem = resultsTableController.filteredItems[indexPath.row]
-            // TODO: Set up the detail view controller to show.
         }
         tableView.deselectRow(at: indexPath, animated: false)
     }

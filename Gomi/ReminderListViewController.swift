@@ -26,6 +26,12 @@ final class ReminderListViewController: UITableViewController {
             UserDefaults.standard.reminders = group.map(Reminder.init(group:))
         }
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        NotificationHelper.registerSettings()
+    }
 }
 
 extension ReminderListViewController {

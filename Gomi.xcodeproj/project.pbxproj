@@ -24,6 +24,8 @@
 		A683450D22A8C57A00B43C6E /* GuideCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A683450B22A8C57A00B43C6E /* GuideCollectionViewCell.xib */; };
 		A683451222A8FB6000B43C6E /* IBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683451122A8FB6000B43C6E /* IBView.swift */; };
 		A683451522A9264300B43C6E /* GuideHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683451322A9264300B43C6E /* GuideHeaderView.swift */; };
+		A6AC2A4222ACB0FE00ED8E61 /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AC2A4122ACB0FD00ED8E61 /* NotificationHelper.swift */; };
+		A6AC2A4422ACB26900ED8E61 /* Reminder+Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AC2A4322ACB26900ED8E61 /* Reminder+Notification.swift */; };
 		A6DD796C22AA41FB00C51D25 /* guide.plist in Resources */ = {isa = PBXBuildFile; fileRef = A6DD796E22AA41FB00C51D25 /* guide.plist */; };
 		A6DD797322AA4EDE00C51D25 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6DD797122AA4EDE00C51D25 /* Localizable.strings */; };
 		A6DD797622AA5A4800C51D25 /* GuideHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6DD797822AA5A4800C51D25 /* GuideHeaderView.xib */; };
@@ -36,8 +38,8 @@
 		A6E660E022ABE46E00331B8B /* WeekdayTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6E660DE22ABE46E00331B8B /* WeekdayTableViewCell.xib */; };
 		A6E660E322ABE8A000331B8B /* WeekTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E660E122ABE8A000331B8B /* WeekTableViewCell.swift */; };
 		A6E660E422ABE8A000331B8B /* WeekTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6E660E222ABE8A000331B8B /* WeekTableViewCell.xib */; };
-		A6E660E722ABFE8500331B8B /* HourTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E660E522ABFE8500331B8B /* HourTableViewCell.swift */; };
-		A6E660E822ABFE8500331B8B /* HourTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6E660E622ABFE8500331B8B /* HourTableViewCell.xib */; };
+		A6E660E722ABFE8500331B8B /* TimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E660E522ABFE8500331B8B /* TimeTableViewCell.swift */; };
+		A6E660E822ABFE8500331B8B /* TimeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6E660E622ABFE8500331B8B /* TimeTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +67,8 @@
 		A683450B22A8C57A00B43C6E /* GuideCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuideCollectionViewCell.xib; sourceTree = "<group>"; };
 		A683451122A8FB6000B43C6E /* IBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBView.swift; sourceTree = "<group>"; };
 		A683451322A9264300B43C6E /* GuideHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideHeaderView.swift; sourceTree = "<group>"; };
+		A6AC2A4122ACB0FD00ED8E61 /* NotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
+		A6AC2A4322ACB26900ED8E61 /* Reminder+Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reminder+Notification.swift"; sourceTree = "<group>"; };
 		A6DD796D22AA41FB00C51D25 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "zh-Hans"; path = "zh-Hans.lproj/guide.plist"; sourceTree = "<group>"; };
 		A6DD796F22AA420800C51D25 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = ja; path = ja.lproj/guide.plist; sourceTree = "<group>"; };
 		A6DD797022AA420900C51D25 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/guide.plist; sourceTree = "<group>"; };
@@ -83,8 +87,8 @@
 		A6E660DE22ABE46E00331B8B /* WeekdayTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeekdayTableViewCell.xib; sourceTree = "<group>"; };
 		A6E660E122ABE8A000331B8B /* WeekTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekTableViewCell.swift; sourceTree = "<group>"; };
 		A6E660E222ABE8A000331B8B /* WeekTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeekTableViewCell.xib; sourceTree = "<group>"; };
-		A6E660E522ABFE8500331B8B /* HourTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourTableViewCell.swift; sourceTree = "<group>"; };
-		A6E660E622ABFE8500331B8B /* HourTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HourTableViewCell.xib; sourceTree = "<group>"; };
+		A6E660E522ABFE8500331B8B /* TimeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableViewCell.swift; sourceTree = "<group>"; };
+		A6E660E622ABFE8500331B8B /* TimeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,8 @@
 				A68344D222A8171300B43C6E /* AppDelegate.swift */,
 				A68344E722A8570900B43C6E /* Store.swift */,
 				A6E660D322ABD3BA00331B8B /* Reminder.swift */,
+				A6AC2A4322ACB26900ED8E61 /* Reminder+Notification.swift */,
+				A6AC2A4122ACB0FD00ED8E61 /* NotificationHelper.swift */,
 				A6E660D522ABD5CB00331B8B /* ReminderListViewController.swift */,
 				A6E660D722ABD61D00331B8B /* ReminderTableViewCell.swift */,
 				A6E660D822ABD61D00331B8B /* ReminderTableViewCell.xib */,
@@ -128,8 +134,8 @@
 				A6E660DE22ABE46E00331B8B /* WeekdayTableViewCell.xib */,
 				A6E660E122ABE8A000331B8B /* WeekTableViewCell.swift */,
 				A6E660E222ABE8A000331B8B /* WeekTableViewCell.xib */,
-				A6E660E522ABFE8500331B8B /* HourTableViewCell.swift */,
-				A6E660E622ABFE8500331B8B /* HourTableViewCell.xib */,
+				A6E660E522ABFE8500331B8B /* TimeTableViewCell.swift */,
+				A6E660E622ABFE8500331B8B /* TimeTableViewCell.xib */,
 				A68344F122A8695300B43C6E /* SearchHistory.swift */,
 				A68344F322A8698500B43C6E /* SearchHeaderView.swift */,
 				A68344D422A8171300B43C6E /* MainTableViewController.swift */,
@@ -225,7 +231,7 @@
 				A68344DD22A8171600B43C6E /* LaunchScreen.storyboard in Resources */,
 				A6E660E422ABE8A000331B8B /* WeekTableViewCell.xib in Resources */,
 				A68344DA22A8171600B43C6E /* Assets.xcassets in Resources */,
-				A6E660E822ABFE8500331B8B /* HourTableViewCell.xib in Resources */,
+				A6E660E822ABFE8500331B8B /* TimeTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,12 +267,14 @@
 				A68344EB22A85A5B00B43C6E /* ItemTableViewCell.swift in Sources */,
 				A683451522A9264300B43C6E /* GuideHeaderView.swift in Sources */,
 				A683450C22A8C57A00B43C6E /* GuideCollectionViewCell.swift in Sources */,
-				A6E660E722ABFE8500331B8B /* HourTableViewCell.swift in Sources */,
+				A6E660E722ABFE8500331B8B /* TimeTableViewCell.swift in Sources */,
 				A6E660D922ABD61D00331B8B /* ReminderTableViewCell.swift in Sources */,
+				A6AC2A4222ACB0FE00ED8E61 /* NotificationHelper.swift in Sources */,
 				A68344E822A8570900B43C6E /* Store.swift in Sources */,
 				A683450922A8C56100B43C6E /* GuideCollectionViewController.swift in Sources */,
 				A68344EE22A8600900B43C6E /* BaseTableViewController.swift in Sources */,
 				A6E660DF22ABE46E00331B8B /* WeekdayTableViewCell.swift in Sources */,
+				A6AC2A4422ACB26900ED8E61 /* Reminder+Notification.swift in Sources */,
 				A68344F422A8698500B43C6E /* SearchHeaderView.swift in Sources */,
 				A6E660D622ABD5CB00331B8B /* ReminderListViewController.swift in Sources */,
 				A68344F222A8695300B43C6E /* SearchHistory.swift in Sources */,

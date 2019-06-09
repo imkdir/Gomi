@@ -21,6 +21,6 @@ final class WeekdayTableViewCell: UITableViewCell {
     }
     
     @IBAction func selecedIndexChanged(_ sender: UISegmentedControl) {
-        onSelect(sender.selectedSegmentIndex)
+        onSelect(sender.selectedSegmentIndex + 1)
     }
 }

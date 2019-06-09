@@ -23,6 +23,8 @@ final class EditReminderViewController: UITableViewController {
         title = NSLocalizedString("Edit", comment: "")
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveAndDismiss))
         
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 47
         tableView.register(.weekday, forCellReuseIdentifier: weekdayIdentifier)
         tableView.register(.week, forCellReuseIdentifier: weekIdentifier)
         tableView.register(.hour, forCellReuseIdentifier: hourIdentifier)
@@ -33,7 +35,9 @@ final class EditReminderViewController: UITableViewController {
     private func saveAndDismiss() {
         var reminders = UserDefaults.standard.reminders
         if let index = reminders.firstIndex(where: { $0.group == reminder.group }) {
+            reminders[index].deactive()
             reminders[index] = reminder
+            if reminder.isOn { reminders[index].activate() }
             UserDefaults.standard.reminders = reminders
         }
         navigationController?.popViewController(animated: true)
@@ -58,7 +62,7 @@ final class EditReminderViewController: UITableViewController {
         case .weekOfMonth:
             let count = reminder.weekOfMonth.count
             return count < 4 ? count + 1 : count
-        case .time:
+        case .due:
             return 1
         }
     }
@@ -72,7 +76,7 @@ final class EditReminderViewController: UITableViewController {
         case .weekday:
             let cell = tableView.dequeueReusableCell(withIdentifier: weekdayIdentifier, for: indexPath) as! WeekdayTableViewCell
             cell.configure(value: reminder.weekday[indexPath.row]) { [unowned self] in
-                self.reminder.weekday[indexPath.row] = $0 + 1
+                self.reminder.weekday[indexPath.row] = $0
             }
             return cell
         case .weekOfMonth where indexPath.row == reminder.weekOfMonth.count:
@@ -85,16 +89,16 @@ final class EditReminderViewController: UITableViewController {
                 self.reminder.weekOfMonth[indexPath.row] = $0
             }
             return cell
-        case .time:
-            if let hour = reminder.hour {
-                let cell = tableView.dequeueReusableCell(withIdentifier: hourIdentifier, for: indexPath) as! HourTableViewCell
-                cell.configure(for: hour) { [unowned self] in
-                    self.reminder.hour = $0 == 0 ? hour : hour + 12
+        case .due:
+            if let date = reminder.due {
+                let cell = tableView.dequeueReusableCell(withIdentifier: hourIdentifier, for: indexPath) as! TimeTableViewCell
+                cell.configure(for: date) { [unowned self] in
+                    self.reminder.due = $0
                 }
                 return cell
             } else {
                 let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-                cell.textLabel?.text = NSLocalizedString("Set Hour", comment: "")
+                cell.textLabel?.text = NSLocalizedString("Add Due time", comment: "")
                 return cell
             }
         }
@@ -114,8 +118,8 @@ final class EditReminderViewController: UITableViewController {
             return .insert
         case .weekOfMonth where indexPath.row == reminder.weekOfMonth.count:
             return .insert
-        case .time:
-            return reminder.hour == nil ? .insert : .delete
+        case .due:
+            return reminder.due == nil ? .insert : .delete
         default:
             return .delete
         }
@@ -126,11 +130,13 @@ final class EditReminderViewController: UITableViewController {
             var shouldReload: Bool = false
             switch Section.allCases[indexPath.section] {
             case .weekday:
+                shouldReload = reminder.weekday.count == 7
                 reminder.weekday.remove(at: indexPath.row)
             case .weekOfMonth:
+                shouldReload = reminder.weekOfMonth.count == 4
                 reminder.weekOfMonth.remove(at: indexPath.row)
-            case .time:
-                reminder.hour = nil
+            case .due:
+                reminder.due = nil
                 shouldReload = true
             }
             if shouldReload {
@@ -147,8 +153,8 @@ final class EditReminderViewController: UITableViewController {
             case .weekOfMonth:
                 reminder.weekOfMonth.append(-1)
                 shouldReload = reminder.weekOfMonth.count == 4
-            case .time:
-                reminder.hour = 8
+            case .due:
+                reminder.due = Date()
                 shouldReload = true
             }
             if shouldReload {
@@ -160,13 +166,13 @@ final class EditReminderViewController: UITableViewController {
     }
 
     enum Section: Int, CaseIterable, CustomStringConvertible {
-        case weekday, weekOfMonth, time
+        case weekday, weekOfMonth, due
         
         var description: String {
             switch self {
             case .weekday: return NSLocalizedString("Weekday", comment: "")
             case .weekOfMonth: return NSLocalizedString("Week of Month", comment: "")
-            case .time: return NSLocalizedString("Hour", comment: "")
+            case .due: return NSLocalizedString("Due", comment: "")
             }
         }
     }
