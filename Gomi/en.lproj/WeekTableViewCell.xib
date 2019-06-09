@@ -20,11 +20,11 @@
                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BH1-ii-GQW">
                         <rect key="frame" x="16" y="8" width="288" height="32"/>
                         <segments>
-                            <segment title="第１"/>
-                            <segment title="第２"/>
-                            <segment title="第３"/>
-                            <segment title="第４"/>
-                            <segment title="第５"/>
+                            <segment title="1st"/>
+                            <segment title="2nd"/>
+                            <segment title="3rd"/>
+                            <segment title="4th"/>
+                            <segment title="5th"/>
                         </segments>
                         <connections>
                             <action selector="selectedIndexChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="HJJ-Ex-HFQ"/>
