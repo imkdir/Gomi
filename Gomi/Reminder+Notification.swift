@@ -21,7 +21,8 @@ extension Reminder {
             for wd in weekday {
                 let identifier = notificationId(weekday: wd, weekOfMonth: wm)
                 let components = dateComponents(weekday: wd, weekOfMonth: wm)
-                NotificationHelper.schedule(identifier: identifier, body: group.description, components: components)
+                let body = String(format: NSLocalizedString("%@ are collected on today.", comment: ""), group.description)
+                NotificationHelper.schedule(identifier: identifier, body: body, components: components)
             }
         }
     }

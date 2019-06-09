@@ -98,7 +98,7 @@ final class EditReminderViewController: UITableViewController {
                 return cell
             } else {
                 let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-                cell.textLabel?.text = NSLocalizedString("Add Due time", comment: "")
+                cell.textLabel?.text = NSLocalizedString("Add Due", comment: "")
                 return cell
             }
         }
@@ -133,7 +133,7 @@ final class EditReminderViewController: UITableViewController {
                 shouldReload = reminder.weekday.count == 7
                 reminder.weekday.remove(at: indexPath.row)
             case .weekOfMonth:
-                shouldReload = reminder.weekOfMonth.count == 4
+                shouldReload = reminder.weekOfMonth.count == 5
                 reminder.weekOfMonth.remove(at: indexPath.row)
             case .due:
                 reminder.due = nil
@@ -152,7 +152,7 @@ final class EditReminderViewController: UITableViewController {
                 shouldReload = reminder.weekday.count == 7
             case .weekOfMonth:
                 reminder.weekOfMonth.append(-1)
-                shouldReload = reminder.weekOfMonth.count == 4
+                shouldReload = reminder.weekOfMonth.count == 5
             case .due:
                 reminder.due = Date()
                 shouldReload = true

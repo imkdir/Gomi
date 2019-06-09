@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.13"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="iOS 13.0 system colors" minToolsVersion="11.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -29,18 +30,29 @@
                             <action selector="userToggledReminderIsOn:" destination="KGk-i7-Jjw" eventType="valueChanged" id="o6Q-a3-QfJ"/>
                         </connections>
                     </switch>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PeW-iH-h9G">
+                        <rect key="frame" x="16" y="45" width="204" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" cocoaTouchSystemColor="secondaryLabelColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="PeW-iH-h9G" secondAttribute="bottom" constant="8" id="7sf-zC-mKn"/>
+                    <constraint firstItem="PeW-iH-h9G" firstAttribute="top" secondItem="PPW-dS-DWg" secondAttribute="bottom" constant="8" id="9VB-8T-1Z2"/>
                     <constraint firstItem="t8e-5F-ZnF" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="G1t-Ao-HL5"/>
+                    <constraint firstItem="t8e-5F-ZnF" firstAttribute="leading" secondItem="PeW-iH-h9G" secondAttribute="trailing" constant="7.5" id="IrB-TL-W48"/>
                     <constraint firstAttribute="trailing" secondItem="t8e-5F-ZnF" secondAttribute="trailing" constant="16" id="Mec-uf-xqK"/>
                     <constraint firstItem="PPW-dS-DWg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="tIt-xd-mt9"/>
                     <constraint firstItem="PPW-dS-DWg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="vUi-i3-i9M"/>
+                    <constraint firstItem="PeW-iH-h9G" firstAttribute="leading" secondItem="PPW-dS-DWg" secondAttribute="leading" id="zWH-AD-MBo"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="controlOn" destination="t8e-5F-ZnF" id="wcU-zt-1fq"/>
                 <outlet property="labelName" destination="PPW-dS-DWg" id="nek-N7-Vuo"/>
+                <outlet property="labelSummary" destination="PeW-iH-h9G" id="pE1-A3-NjR"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="144.64285714285714"/>
         </tableViewCell>

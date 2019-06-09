@@ -35,11 +35,11 @@
 		A6E660DA22ABD61D00331B8B /* ReminderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6E660D822ABD61D00331B8B /* ReminderTableViewCell.xib */; };
 		A6E660DC22ABE44700331B8B /* EditReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E660DB22ABE44700331B8B /* EditReminderViewController.swift */; };
 		A6E660DF22ABE46E00331B8B /* WeekdayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E660DD22ABE46E00331B8B /* WeekdayTableViewCell.swift */; };
-		A6E660E022ABE46E00331B8B /* WeekdayTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6E660DE22ABE46E00331B8B /* WeekdayTableViewCell.xib */; };
 		A6E660E322ABE8A000331B8B /* WeekTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E660E122ABE8A000331B8B /* WeekTableViewCell.swift */; };
-		A6E660E422ABE8A000331B8B /* WeekTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6E660E222ABE8A000331B8B /* WeekTableViewCell.xib */; };
 		A6E660E722ABFE8500331B8B /* TimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E660E522ABFE8500331B8B /* TimeTableViewCell.swift */; };
 		A6E660E822ABFE8500331B8B /* TimeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6E660E622ABFE8500331B8B /* TimeTableViewCell.xib */; };
+		A6F4E29222ACDA310045FF8E /* WeekdayTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6F4E29422ACDA310045FF8E /* WeekdayTableViewCell.xib */; };
+		A6F4E29D22ACDA6D0045FF8E /* WeekTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6F4E29F22ACDA6D0045FF8E /* WeekTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,11 +84,15 @@
 		A6E660D822ABD61D00331B8B /* ReminderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReminderTableViewCell.xib; sourceTree = "<group>"; };
 		A6E660DB22ABE44700331B8B /* EditReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditReminderViewController.swift; sourceTree = "<group>"; };
 		A6E660DD22ABE46E00331B8B /* WeekdayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdayTableViewCell.swift; sourceTree = "<group>"; };
-		A6E660DE22ABE46E00331B8B /* WeekdayTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeekdayTableViewCell.xib; sourceTree = "<group>"; };
 		A6E660E122ABE8A000331B8B /* WeekTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekTableViewCell.swift; sourceTree = "<group>"; };
-		A6E660E222ABE8A000331B8B /* WeekTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeekTableViewCell.xib; sourceTree = "<group>"; };
 		A6E660E522ABFE8500331B8B /* TimeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableViewCell.swift; sourceTree = "<group>"; };
 		A6E660E622ABFE8500331B8B /* TimeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeTableViewCell.xib; sourceTree = "<group>"; };
+		A6F4E29A22ACDA500045FF8E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/WeekdayTableViewCell.xib"; sourceTree = "<group>"; };
+		A6F4E29B22ACDA500045FF8E /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ja; path = ja.lproj/WeekdayTableViewCell.xib; sourceTree = "<group>"; };
+		A6F4E29C22ACDA560045FF8E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/WeekdayTableViewCell.xib; sourceTree = "<group>"; };
+		A6F4E2A422ACDA7F0045FF8E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/WeekTableViewCell.xib"; sourceTree = "<group>"; };
+		A6F4E2A522ACDA7F0045FF8E /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ja; path = ja.lproj/WeekTableViewCell.xib; sourceTree = "<group>"; };
+		A6F4E2A622ACDA7F0045FF8E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/WeekTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,9 +135,9 @@
 				A6E660D822ABD61D00331B8B /* ReminderTableViewCell.xib */,
 				A6E660DB22ABE44700331B8B /* EditReminderViewController.swift */,
 				A6E660DD22ABE46E00331B8B /* WeekdayTableViewCell.swift */,
-				A6E660DE22ABE46E00331B8B /* WeekdayTableViewCell.xib */,
+				A6F4E29422ACDA310045FF8E /* WeekdayTableViewCell.xib */,
 				A6E660E122ABE8A000331B8B /* WeekTableViewCell.swift */,
-				A6E660E222ABE8A000331B8B /* WeekTableViewCell.xib */,
+				A6F4E29F22ACDA6D0045FF8E /* WeekTableViewCell.xib */,
 				A6E660E522ABFE8500331B8B /* TimeTableViewCell.swift */,
 				A6E660E622ABFE8500331B8B /* TimeTableViewCell.xib */,
 				A68344F122A8695300B43C6E /* SearchHistory.swift */,
@@ -222,14 +226,14 @@
 			files = (
 				A68344EC22A85A5B00B43C6E /* ItemTableViewCell.xib in Resources */,
 				A683450D22A8C57A00B43C6E /* GuideCollectionViewCell.xib in Resources */,
-				A6E660E022ABE46E00331B8B /* WeekdayTableViewCell.xib in Resources */,
+				A6F4E29222ACDA310045FF8E /* WeekdayTableViewCell.xib in Resources */,
 				A6DD797622AA5A4800C51D25 /* GuideHeaderView.xib in Resources */,
 				A68344F622A8A42700B43C6E /* table.plist in Resources */,
 				A6DD796C22AA41FB00C51D25 /* guide.plist in Resources */,
 				A6E660DA22ABD61D00331B8B /* ReminderTableViewCell.xib in Resources */,
 				A6DD797322AA4EDE00C51D25 /* Localizable.strings in Resources */,
 				A68344DD22A8171600B43C6E /* LaunchScreen.storyboard in Resources */,
-				A6E660E422ABE8A000331B8B /* WeekTableViewCell.xib in Resources */,
+				A6F4E29D22ACDA6D0045FF8E /* WeekTableViewCell.xib in Resources */,
 				A68344DA22A8171600B43C6E /* Assets.xcassets in Resources */,
 				A6E660E822ABFE8500331B8B /* TimeTableViewCell.xib in Resources */,
 			);
@@ -338,6 +342,26 @@
 				A6DD797F22AA5B8700C51D25 /* ja */,
 			);
 			name = GuideHeaderView.xib;
+			sourceTree = "<group>";
+		};
+		A6F4E29422ACDA310045FF8E /* WeekdayTableViewCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A6F4E29A22ACDA500045FF8E /* zh-Hans */,
+				A6F4E29B22ACDA500045FF8E /* ja */,
+				A6F4E29C22ACDA560045FF8E /* en */,
+			);
+			name = WeekdayTableViewCell.xib;
+			sourceTree = "<group>";
+		};
+		A6F4E29F22ACDA6D0045FF8E /* WeekTableViewCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A6F4E2A422ACDA7F0045FF8E /* zh-Hans */,
+				A6F4E2A522ACDA7F0045FF8E /* ja */,
+				A6F4E2A622ACDA7F0045FF8E /* en */,
+			);
+			name = WeekTableViewCell.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

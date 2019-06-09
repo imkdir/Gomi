@@ -7,6 +7,7 @@ extension UINib {
 final class ReminderTableViewCell: UITableViewCell {
     
     @IBOutlet weak var labelName: UILabel!
+    @IBOutlet weak var labelSummary: UILabel!
     @IBOutlet weak var controlOn: UISwitch!
     
     private var reminder: Reminder!
@@ -14,6 +15,7 @@ final class ReminderTableViewCell: UITableViewCell {
     func configure(for reminder: Reminder) {
         self.reminder = reminder
         labelName.text = reminder.group.description
+        labelSummary.text = reminder.summary
         controlOn.isOn = reminder.isOn
     }
     
@@ -31,4 +33,32 @@ final class ReminderTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+}
+
+
+extension Reminder {
+    fileprivate var summary: String {
+        let separator = NSLocalizedString(" & ", comment: "")
+        print(weekdaySymbols)
+        let weekdays = weekday.sorted().map({ weekdaySymbols[$0 - 1] }).joined(separator: separator)
+        if weekOfMonth.isEmpty {
+            return weekdays
+        } else {
+            let weeks = weekOfMonth.sorted().map({ weekOfMonths[$0 - 1] }).joined(separator: separator)
+            return weeks.appending(" \(weekdays)")
+        }
+    }
+}
+
+private var weekdaySymbols: [String] {
+    return DateFormatter().shortWeekdaySymbols
+}
+private var weekOfMonths: [String] {
+    return [
+        NSLocalizedString("1st", comment: ""),
+        NSLocalizedString("2nd", comment: ""),
+        NSLocalizedString("3rd", comment: ""),
+        NSLocalizedString("4th", comment: ""),
+        NSLocalizedString("5th", comment: "")
+    ]
 }
