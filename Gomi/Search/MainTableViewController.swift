@@ -53,7 +53,6 @@ final class MainTableViewController: BaseTableViewController {
         navigationItem.hidesSearchBarWhenScrolling = false
         
         searchController.delegate = self
-        searchController.dimsBackgroundDuringPresentation = false // The default is true.
         searchController.searchBar.delegate = self // Monitor when the search button is tapped.
         
         definesPresentationContext = true

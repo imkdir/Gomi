@@ -56,7 +56,6 @@
 		A68344EF22A8616A00B43C6E /* ResultsTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableController.swift; sourceTree = "<group>"; };
 		A68344F122A8695300B43C6E /* SearchHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchHistory.swift; sourceTree = "<group>"; };
 		A68344F322A8698500B43C6E /* SearchHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchHeaderView.swift; sourceTree = "<group>"; };
-		A68344F522A86F6300B43C6E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		A68344F922A8A44A00B43C6E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		A68344FA22A8A44A00B43C6E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = ja; path = ja.lproj/table.plist; sourceTree = "<group>"; };
 		A68344FB22A8A45400B43C6E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -93,6 +92,7 @@
 		A6F4E2A422ACDA7F0045FF8E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/WeekTableViewCell.xib"; sourceTree = "<group>"; };
 		A6F4E2A522ACDA7F0045FF8E /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ja; path = ja.lproj/WeekTableViewCell.xib; sourceTree = "<group>"; };
 		A6F4E2A622ACDA7F0045FF8E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/WeekTableViewCell.xib; sourceTree = "<group>"; };
+		A6F4E2A722AD2EA60045FF8E /* Gomi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Gomi.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,11 +125,44 @@
 		A68344D122A8171300B43C6E /* Gomi */ = {
 			isa = PBXGroup;
 			children = (
-				A68344D222A8171300B43C6E /* AppDelegate.swift */,
+				A6F4E2A722AD2EA60045FF8E /* Gomi.entitlements */,
+				A68344DE22A8171600B43C6E /* Info.plist */,
+				A6F4E2AD22AD350D0045FF8E /* Support */,
+				A6F4E2A822AD346B0045FF8E /* Model */,
+				A6F4E2A922AD34980045FF8E /* Utils */,
+				A6F4E2AA22AD34B10045FF8E /* Reminder */,
+				A6F4E2AB22AD34DC0045FF8E /* Search */,
+				A6F4E2AC22AD34EC0045FF8E /* Guide */,
+			);
+			path = Gomi;
+			sourceTree = "<group>";
+		};
+		A6F4E2A822AD346B0045FF8E /* Model */ = {
+			isa = PBXGroup;
+			children = (
 				A68344E722A8570900B43C6E /* Store.swift */,
 				A6E660D322ABD3BA00331B8B /* Reminder.swift */,
 				A6AC2A4322ACB26900ED8E61 /* Reminder+Notification.swift */,
+				A68344F122A8695300B43C6E /* SearchHistory.swift */,
+				A68344F822A8A42700B43C6E /* table.plist */,
+				A6DD796E22AA41FB00C51D25 /* guide.plist */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A6F4E2A922AD34980045FF8E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A68344ED22A8600900B43C6E /* BaseTableViewController.swift */,
 				A6AC2A4122ACB0FD00ED8E61 /* NotificationHelper.swift */,
+				A683451122A8FB6000B43C6E /* IBView.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A6F4E2AA22AD34B10045FF8E /* Reminder */ = {
+			isa = PBXGroup;
+			children = (
 				A6E660D522ABD5CB00331B8B /* ReminderListViewController.swift */,
 				A6E660D722ABD61D00331B8B /* ReminderTableViewCell.swift */,
 				A6E660D822ABD61D00331B8B /* ReminderTableViewCell.xib */,
@@ -140,28 +173,43 @@
 				A6F4E29F22ACDA6D0045FF8E /* WeekTableViewCell.xib */,
 				A6E660E522ABFE8500331B8B /* TimeTableViewCell.swift */,
 				A6E660E622ABFE8500331B8B /* TimeTableViewCell.xib */,
-				A68344F122A8695300B43C6E /* SearchHistory.swift */,
+			);
+			path = Reminder;
+			sourceTree = "<group>";
+		};
+		A6F4E2AB22AD34DC0045FF8E /* Search */ = {
+			isa = PBXGroup;
+			children = (
 				A68344F322A8698500B43C6E /* SearchHeaderView.swift */,
 				A68344D422A8171300B43C6E /* MainTableViewController.swift */,
 				A68344EF22A8616A00B43C6E /* ResultsTableController.swift */,
-				A68344ED22A8600900B43C6E /* BaseTableViewController.swift */,
 				A68344E922A85A5B00B43C6E /* ItemTableViewCell.swift */,
 				A68344EA22A85A5B00B43C6E /* ItemTableViewCell.xib */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		A6F4E2AC22AD34EC0045FF8E /* Guide */ = {
+			isa = PBXGroup;
+			children = (
 				A683450822A8C56100B43C6E /* GuideCollectionViewController.swift */,
 				A683450A22A8C57A00B43C6E /* GuideCollectionViewCell.swift */,
 				A683450B22A8C57A00B43C6E /* GuideCollectionViewCell.xib */,
 				A683451322A9264300B43C6E /* GuideHeaderView.swift */,
 				A6DD797822AA5A4800C51D25 /* GuideHeaderView.xib */,
-				A683451122A8FB6000B43C6E /* IBView.swift */,
+			);
+			path = Guide;
+			sourceTree = "<group>";
+		};
+		A6F4E2AD22AD350D0045FF8E /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				A68344D222A8171300B43C6E /* AppDelegate.swift */,
 				A68344D922A8171600B43C6E /* Assets.xcassets */,
 				A68344DB22A8171600B43C6E /* LaunchScreen.storyboard */,
 				A6DD797122AA4EDE00C51D25 /* Localizable.strings */,
-				A68344F822A8A42700B43C6E /* table.plist */,
-				A6DD796E22AA41FB00C51D25 /* guide.plist */,
-				A68344DE22A8171600B43C6E /* Info.plist */,
-				A68344F522A86F6300B43C6E /* README.md */,
 			);
-			path = Gomi;
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,7 +448,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -462,7 +510,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Distribution";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -489,16 +537,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Gomi/Gomi.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_UIKITFORMAC_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = DUDTP565G4;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
 				INFOPLIST_FILE = Gomi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.richrabbits.Gomi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wordrop.Gomi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_UIKITFORMAC = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -508,16 +562,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Gomi/Gomi.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_UIKITFORMAC_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = DUDTP565G4;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
 				INFOPLIST_FILE = Gomi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.richrabbits.Gomi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wordrop.Gomi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_UIKITFORMAC = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
