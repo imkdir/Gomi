@@ -20,7 +20,7 @@ final class EditReminderViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = NSLocalizedString("Edit", comment: "")
+        title = reminder.group.description
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveAndDismiss))
         
         tableView.rowHeight = UITableView.automaticDimension

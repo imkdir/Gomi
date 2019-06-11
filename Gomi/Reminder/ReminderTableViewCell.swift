@@ -53,6 +53,7 @@ extension Reminder {
 private var weekdaySymbols: [String] {
     return DateFormatter().shortWeekdaySymbols
 }
+
 private var weekOfMonths: [String] {
     return [
         NSLocalizedString("1st", comment: ""),

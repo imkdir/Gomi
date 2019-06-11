@@ -14,6 +14,10 @@ extension Reminder {
     }
 }
 
+extension Notification.Name {
+    static let reminderContentsDidUpdate = Notification.Name(rawValue: "com.wordrop.reminderContentsDidUpdate")
+}
+
 extension UserDefaults {
     var reminders: [Reminder] {
         set {
@@ -21,6 +25,7 @@ extension UserDefaults {
                 let data = try PropertyListEncoder().encode(newValue)
                 self.setValue(data, forKey: #function)
                 synchronize()
+                NotificationCenter.default.post(name: .reminderContentsDidUpdate, object: nil)
             } catch {
                 print(#function, newValue, "save failed")
             }

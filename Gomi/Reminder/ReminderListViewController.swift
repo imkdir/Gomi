@@ -32,6 +32,22 @@ final class ReminderListViewController: UITableViewController {
         
         NotificationHelper.registerSettings()
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(handleContentsUpdate), name: .reminderContentsDidUpdate, object: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        NotificationCenter.default.removeObserver(self, name: .reminderContentsDidUpdate, object: nil)
+    }
+    
+    @objc private func handleContentsUpdate() {
+        tableView.reloadData()
+    }
 }
 
 extension ReminderListViewController {
