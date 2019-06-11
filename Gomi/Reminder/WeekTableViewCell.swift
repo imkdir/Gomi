@@ -21,7 +21,7 @@ final class WeekTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        controlWeekOfMonth.setTitleTextAttributes([.foregroundColor: UIColor.lightGray], for: [.normal])
-        controlWeekOfMonth.setTitleTextAttributes([.foregroundColor: UIColor.black], for: [.selected])
+        controlWeekOfMonth.setTitleTextAttributes([.font: UIFont.systemFont(ofSize: 15)], for: [.normal])
+        controlWeekOfMonth.setTitleTextAttributes([.font: UIFont.boldSystemFont(ofSize: 15)], for: [.selected])
     }
 }

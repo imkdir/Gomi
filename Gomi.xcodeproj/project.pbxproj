@@ -56,7 +56,7 @@
 		A68344EF22A8616A00B43C6E /* ResultsTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableController.swift; sourceTree = "<group>"; };
 		A68344F122A8695300B43C6E /* SearchHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchHistory.swift; sourceTree = "<group>"; };
 		A68344F322A8698500B43C6E /* SearchHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchHeaderView.swift; sourceTree = "<group>"; };
-		A68344F522A86F6300B43C6E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		A68344F522A86F6300B43C6E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = Gomi/README.md; sourceTree = SOURCE_ROOT; };
 		A68344F922A8A44A00B43C6E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		A68344FA22A8A44A00B43C6E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = ja; path = ja.lproj/table.plist; sourceTree = "<group>"; };
 		A68344FB22A8A45400B43C6E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -125,11 +125,44 @@
 		A68344D122A8171300B43C6E /* Gomi */ = {
 			isa = PBXGroup;
 			children = (
+				A68344DE22A8171600B43C6E /* Info.plist */,
 				A68344D222A8171300B43C6E /* AppDelegate.swift */,
+				A6BC3C0322AF62E800685FD9 /* Model */,
+				A6BC3C0422AF62FE00685FD9 /* Utils */,
+				A6BC3C0522AF631700685FD9 /* Reminder */,
+				A6BC3C0622AF632600685FD9 /* Search */,
+				A6BC3C0722AF633100685FD9 /* Guide */,
+				A6BC3C0822AF635D00685FD9 /* Support */,
+			);
+			path = Gomi;
+			sourceTree = "<group>";
+		};
+		A6BC3C0322AF62E800685FD9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A68344F822A8A42700B43C6E /* table.plist */,
+				A6DD796E22AA41FB00C51D25 /* guide.plist */,
 				A68344E722A8570900B43C6E /* Store.swift */,
 				A6E660D322ABD3BA00331B8B /* Reminder.swift */,
 				A6AC2A4322ACB26900ED8E61 /* Reminder+Notification.swift */,
+				A68344F122A8695300B43C6E /* SearchHistory.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A6BC3C0422AF62FE00685FD9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
 				A6AC2A4122ACB0FD00ED8E61 /* NotificationHelper.swift */,
+				A68344ED22A8600900B43C6E /* BaseTableViewController.swift */,
+				A683451122A8FB6000B43C6E /* IBView.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A6BC3C0522AF631700685FD9 /* Reminder */ = {
+			isa = PBXGroup;
+			children = (
 				A6E660D522ABD5CB00331B8B /* ReminderListViewController.swift */,
 				A6E660D722ABD61D00331B8B /* ReminderTableViewCell.swift */,
 				A6E660D822ABD61D00331B8B /* ReminderTableViewCell.xib */,
@@ -140,28 +173,43 @@
 				A6F4E29F22ACDA6D0045FF8E /* WeekTableViewCell.xib */,
 				A6E660E522ABFE8500331B8B /* TimeTableViewCell.swift */,
 				A6E660E622ABFE8500331B8B /* TimeTableViewCell.xib */,
-				A68344F122A8695300B43C6E /* SearchHistory.swift */,
+			);
+			path = Reminder;
+			sourceTree = "<group>";
+		};
+		A6BC3C0622AF632600685FD9 /* Search */ = {
+			isa = PBXGroup;
+			children = (
 				A68344F322A8698500B43C6E /* SearchHeaderView.swift */,
 				A68344D422A8171300B43C6E /* MainTableViewController.swift */,
 				A68344EF22A8616A00B43C6E /* ResultsTableController.swift */,
-				A68344ED22A8600900B43C6E /* BaseTableViewController.swift */,
 				A68344E922A85A5B00B43C6E /* ItemTableViewCell.swift */,
 				A68344EA22A85A5B00B43C6E /* ItemTableViewCell.xib */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		A6BC3C0722AF633100685FD9 /* Guide */ = {
+			isa = PBXGroup;
+			children = (
 				A683450822A8C56100B43C6E /* GuideCollectionViewController.swift */,
 				A683450A22A8C57A00B43C6E /* GuideCollectionViewCell.swift */,
 				A683450B22A8C57A00B43C6E /* GuideCollectionViewCell.xib */,
 				A683451322A9264300B43C6E /* GuideHeaderView.swift */,
 				A6DD797822AA5A4800C51D25 /* GuideHeaderView.xib */,
-				A683451122A8FB6000B43C6E /* IBView.swift */,
-				A68344D922A8171600B43C6E /* Assets.xcassets */,
+			);
+			path = Guide;
+			sourceTree = "<group>";
+		};
+		A6BC3C0822AF635D00685FD9 /* Support */ = {
+			isa = PBXGroup;
+			children = (
 				A68344DB22A8171600B43C6E /* LaunchScreen.storyboard */,
 				A6DD797122AA4EDE00C51D25 /* Localizable.strings */,
-				A68344F822A8A42700B43C6E /* table.plist */,
-				A6DD796E22AA41FB00C51D25 /* guide.plist */,
-				A68344DE22A8171600B43C6E /* Info.plist */,
+				A68344D922A8171600B43C6E /* Assets.xcassets */,
 				A68344F522A86F6300B43C6E /* README.md */,
 			);
-			path = Gomi;
+			name = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -497,7 +545,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.richrabbits.Gomi;
+				PRODUCT_BUNDLE_IDENTIFIER = app.wordrop.Gomino;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -516,7 +564,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.richrabbits.Gomi;
+				PRODUCT_BUNDLE_IDENTIFIER = app.wordrop.Gomino;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
