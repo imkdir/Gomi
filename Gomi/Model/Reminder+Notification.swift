@@ -1,26 +1,18 @@
 import Foundation
 
 extension Reminder {
-    private func notificationId(weekday: Int, weekOfMonth: Int) -> String {
-        return String(format: "G:%dWD:%d:WM:%d", group.rawValue, weekday, weekOfMonth)
-    }
-    
-    private func dateComponents(weekday: Int, weekOfMonth: Int) -> DateComponents {
-        var components = DateComponents()
-        components.weekday = weekday
-        components.weekOfMonth = weekOfMonth
-        if let due = self.due {
-            components.hour = due[.hour]
-            components.minute = due[.minute]
-        }
-        return components
-    }
-    
+
     func activate() {
+        guard let due = self.due else { return }
+        
         for wm in weekOfMonth {
             for wd in weekday {
-                let identifier = notificationId(weekday: wd, weekOfMonth: wm)
-                let components = dateComponents(weekday: wd, weekOfMonth: wm)
+                let identifier = nid(weekday: wd, weekOfMonth: wm)
+                var components = DateComponents()
+                components.weekday = wd
+                components.weekOfMonth = wm
+                components.hour = due[.hour]
+                components.minute = due[.minute]
                 let body = String(format: NSLocalizedString("%@ are collected on today.", comment: ""), group.description)
                 NotificationHelper.schedule(identifier: identifier, body: body, components: components)
             }
@@ -28,10 +20,15 @@ extension Reminder {
     }
     
     func deactive() {
-        let identifiers = weekOfMonth.flatMap({ wm in
-            weekday.map({ wd in
-                notificationId(weekday: wd, weekOfMonth: wm) }) })
+        let identifiers = weekOfMonth
+            .flatMap { wm in
+                weekday.map { wd in nid(weekday: wd, weekOfMonth: wm) }
+            }
         NotificationHelper.cancelAlert(identifiers: identifiers)
+    }
+    
+    private func nid(weekday: Int, weekOfMonth: Int) -> String {
+        String(format: "G:%dWD:%d:WM:%d", group.rawValue, weekday, weekOfMonth)
     }
 }
 

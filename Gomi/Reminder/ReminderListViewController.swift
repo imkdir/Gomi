@@ -4,9 +4,13 @@ private let reuseIdentifier = "Reminder"
 
 final class ReminderListViewController: UITableViewController {
     
-    init() {
+    private var userDefaults: UserDefaults
+    
+    init(userDefaults: UserDefaults) {
+        self.userDefaults = userDefaults
         super.init(nibName: nil, bundle: nil)
-        tabBarItem = UITabBarItem(tabBarSystemItem: .recents, tag: 1)
+        tabBarItem = UITabBarItem(
+            title: NSLocalizedString("Reminder", comment: ""), image: UIImage(systemName: "alarm"), tag: 1)
     }
     
     required init?(coder: NSCoder) {
@@ -21,9 +25,9 @@ final class ReminderListViewController: UITableViewController {
         tableView.register(.reminder, forCellReuseIdentifier: reuseIdentifier)
         tableView.tableFooterView = UIView(frame: .zero)
         
-        if UserDefaults.standard.reminders.isEmpty {
+        if userDefaults.reminders.isEmpty {
             let group: [Item.Group] = [.resource, .combustible, .incombustible, .containMercury, .usedPaper]
-            UserDefaults.standard.reminders = group.map(Reminder.init(group:))
+            userDefaults.reminders = group.map(Reminder.init(group:))
         }
     }
     
@@ -52,19 +56,19 @@ final class ReminderListViewController: UITableViewController {
 
 extension ReminderListViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return UserDefaults.standard.reminders.count
+        return userDefaults.reminders.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! ReminderTableViewCell
-        let reminder = UserDefaults.standard.reminders[indexPath.row]
-        cell.configure(for: reminder)
+        let reminder = userDefaults.reminders[indexPath.row]
+        cell.configure(source: userDefaults, reminder: reminder)
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let reminder = UserDefaults.standard.reminders[indexPath.row]
-        let vc = EditReminderViewController(reminder: reminder)
+        let reminder = userDefaults.reminders[indexPath.row]
+        let vc = EditReminderViewController(source: userDefaults, reminder: reminder)
         navigationController?.pushViewController(vc, animated: true)
     }
 }

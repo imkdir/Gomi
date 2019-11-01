@@ -1,40 +1,41 @@
 import Foundation
 
 struct SearchHistory {
+    let userDefaults: UserDefaults
     
-    static func log(term: String) {
+    mutating func log(term: String) {
         store.append(term)
     }
     
-    static var length: Int {
+    var length: Int {
         set {
-            UserDefaults.standard.set(newValue, forKey: #function)
-            UserDefaults.standard.synchronize()
+            userDefaults.set(newValue, forKey: #function)
+            userDefaults.synchronize()
         }
         get {
-            return UserDefaults.standard.integer(forKey: #function)
+            userDefaults.integer(forKey: #function)
         }
     }
     
-    static var read: [String] {
-        return store.reversed()
+    var read: [String] {
+        store.reversed()
     }
     
-    static func clear() {
+    mutating func clear() {
         store.removeAll()
     }
     
-    fileprivate static var store: [String] {
+    fileprivate var store: [String] {
         set {
             var newValue = newValue
             if length != 0, newValue.count > length {
                 newValue.removeLast(length - newValue.count)
             }
-            UserDefaults.standard.set(newValue, forKey: #function)
-            UserDefaults.standard.synchronize()
+            userDefaults.set(newValue, forKey: #function)
+            userDefaults.synchronize()
         }
         get {
-            return UserDefaults.standard.value(forKey: #function) as? [String] ?? []
+            return userDefaults.value(forKey: #function) as? [String] ?? []
         }
     }
 }

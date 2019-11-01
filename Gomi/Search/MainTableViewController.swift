@@ -13,6 +13,8 @@ final class MainTableViewController: BaseTableViewController {
     
     /// Data model for the table view.
     var items: [Item] = []
+    private var store: Store
+    private var searchHistory: SearchHistory
     
     /** The following 2 properties are set in viewDidLoad(),
      They are implicitly unwrapped optionals because they are used in many other places
@@ -25,7 +27,9 @@ final class MainTableViewController: BaseTableViewController {
     /// Secondary search results table view.
     private var resultsTableController: ResultsTableController!
     
-    init() {
+    init(store: Store, searchHistory: SearchHistory) {
+        self.store = store
+        self.searchHistory = searchHistory
         super.init(nibName: nil, bundle: nil)
         tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
     }
@@ -65,7 +69,7 @@ final class MainTableViewController: BaseTableViewController {
     
     @objc
     private func clearSearch() {
-        SearchHistory.clear()
+        searchHistory.clear()
         tableView.reloadData()
     }
 }
@@ -78,7 +82,7 @@ extension MainTableViewController {
 
         // Check to see which table view cell was selected.
         if tableView === self.tableView {
-            let term = SearchHistory.read[indexPath.row]
+            let term = searchHistory.read[indexPath.row]
             searchController.isActive = true
             searchController.searchBar.text = term
         }
@@ -90,18 +94,18 @@ extension MainTableViewController {
 
 extension MainTableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return SearchHistory.read.count
+        return searchHistory.read.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-        cell.textLabel!.text = SearchHistory.read[indexPath.row]
+        cell.textLabel!.text = searchHistory.read[indexPath.row]
         return cell
     }
     
     override public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard tableView === self.tableView else { return nil }
-        guard !SearchHistory.read.isEmpty else { return nil }
+        guard !searchHistory.read.isEmpty else { return nil }
         
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: headerReuseIdentifier) as! SearchHeaderView
         header.button.addTarget(self, action: #selector(clearSearch), for: [.touchUpInside])
@@ -118,7 +122,7 @@ extension MainTableViewController: UISearchBarDelegate {
         guard !searchTerm.isEmpty else { return }
         
         searchBar.resignFirstResponder()
-        SearchHistory.log(term: searchTerm)
+        searchHistory.log(term: searchTerm)
     }
     
 }
@@ -168,7 +172,7 @@ extension MainTableViewController: UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
         // Update the filtered array based on the search text.
-        let searchResults = Store.shared.items
+        let searchResults = store.items
         
         // Strip out all the leading and trailing spaces.
         let whitespaceCharacterSet = CharacterSet.whitespaces

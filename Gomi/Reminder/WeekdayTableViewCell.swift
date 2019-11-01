@@ -16,8 +16,8 @@ final class WeekdayTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        controlWeekday.setTitleTextAttributes([.foregroundColor: UIColor.lightGray], for: [.normal])
-        controlWeekday.setTitleTextAttributes([.foregroundColor: UIColor.black], for: [.selected])
+        controlWeekday.setTitleTextAttributes([.foregroundColor: UIColor.systemGray], for: [.normal])
+        controlWeekday.setTitleTextAttributes([.foregroundColor: UIColor.label], for: [.selected])
     }
     
     @IBAction func selecedIndexChanged(_ sender: UISegmentedControl) {

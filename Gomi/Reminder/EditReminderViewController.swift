@@ -7,8 +7,10 @@ private let hourIdentifier = "Hour"
 final class EditReminderViewController: UITableViewController {
     
     private var reminder: Reminder
+    private var source: UserDefaults
     
-    init(reminder: Reminder) {
+    init(source: UserDefaults, reminder: Reminder) {
+        self.source = source
         self.reminder = reminder
         super.init(style: .grouped)
     }
@@ -33,12 +35,12 @@ final class EditReminderViewController: UITableViewController {
     
     @objc
     private func saveAndDismiss() {
-        var reminders = UserDefaults.standard.reminders
+        var reminders = source.reminders
         if let index = reminders.firstIndex(where: { $0.group == reminder.group }) {
             reminders[index].deactive()
             reminders[index] = reminder
             if reminder.isOn { reminders[index].activate() }
-            UserDefaults.standard.reminders = reminders
+            source.reminders = reminders
         }
         navigationController?.popViewController(animated: true)
     }
@@ -98,7 +100,7 @@ final class EditReminderViewController: UITableViewController {
                 return cell
             } else {
                 let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-                cell.textLabel?.text = NSLocalizedString("Add Due", comment: "")
+                cell.textLabel?.text = NSLocalizedString("Add Reminder", comment: "")
                 return cell
             }
         }
@@ -154,7 +156,6 @@ final class EditReminderViewController: UITableViewController {
                 reminder.weekOfMonth.append(-1)
                 shouldReload = reminder.weekOfMonth.count == 5
             case .due:
-                reminder.due = Date()
                 shouldReload = true
             }
             if shouldReload {
@@ -172,7 +173,7 @@ final class EditReminderViewController: UITableViewController {
             switch self {
             case .weekday: return NSLocalizedString("Weekday", comment: "")
             case .weekOfMonth: return NSLocalizedString("Week of Month", comment: "")
-            case .due: return NSLocalizedString("Due", comment: "")
+            case .due: return NSLocalizedString("Reminder", comment: "")
             }
         }
     }

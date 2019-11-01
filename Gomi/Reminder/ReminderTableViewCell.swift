@@ -11,9 +11,11 @@ final class ReminderTableViewCell: UITableViewCell {
     @IBOutlet weak var controlOn: UISwitch!
     
     private var reminder: Reminder!
+    private var source: UserDefaults!
     
-    func configure(for reminder: Reminder) {
+    func configure(source: UserDefaults, reminder: Reminder) {
         self.reminder = reminder
+        self.source = source
         labelName.text = reminder.group.description
         labelSummary.text = reminder.summary
         controlOn.isOn = reminder.isOn
@@ -21,12 +23,12 @@ final class ReminderTableViewCell: UITableViewCell {
     
     @IBAction func userToggledReminderIsOn(_ sender: UISwitch) {
         reminder.isOn = sender.isOn
-        var reminders = UserDefaults.standard.reminders
+        var reminders = source.reminders
         if let index = reminders.firstIndex(where: { $0.group == reminder.group }) {
             reminders[index].deactive()
             reminders[index] = reminder
             if sender.isOn { reminders[index].activate() }
-            UserDefaults.standard.reminders = reminders
+            source.reminders = reminders
         }
     }
     
@@ -39,7 +41,6 @@ final class ReminderTableViewCell: UITableViewCell {
 extension Reminder {
     fileprivate var summary: String {
         let separator = NSLocalizedString(" & ", comment: "")
-        print(weekdaySymbols)
         let weekdays = weekday.sorted().map({ weekdaySymbols[$0 - 1] }).joined(separator: separator)
         if weekOfMonth.isEmpty {
             return weekdays

@@ -2,25 +2,17 @@ import Foundation
 
 struct Store: Codable {
     var items: [Item]
-    var guides: [[Guide]]
-    
-    func guides(for group: Item.Group) -> [Guide] {
-        return guides[group.rawValue]
-    }
-    
-    static var shared: Store! {
+}
+
+extension Store {
+    init?(path name: String, type: String = "plist") {
         let decoder = PropertyListDecoder()
-        guard let tablePath = Bundle.main.path(forResource: "table", ofType: "plist"),
+        guard let tablePath = Bundle.main.path(forResource: name, ofType: type),
             let tableData = try? Data(contentsOf: URL(fileURLWithPath: tablePath)),
             let items = try? decoder.decode([Item].self, from: tableData) else {
             return nil
         }
-        guard let guidePath = Bundle.main.path(forResource: "guide", ofType: "plist"),
-            let guideData = try? Data(contentsOf: URL(fileURLWithPath: guidePath)),
-            let guides = try? decoder.decode([[Guide]].self, from: guideData) else {
-                return nil
-        }
-        return .init(items: items, guides: guides)
+        self.init(items: items)
     }
 }
 
@@ -31,12 +23,4 @@ class Item: NSObject, Codable {
     enum Group: Int, Codable {
         case resource, combustible, incombustible, usedPaper, oversized, impossible, containMercury
     }
-}
-
-struct Guide: Codable {
-    let id: Int
-    let title: String
-    let detail: String
-    let subgroup: String
-    let dispose: String
 }
